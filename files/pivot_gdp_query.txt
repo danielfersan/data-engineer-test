@@ -1,0 +1,18 @@
+
+WITH
+years as (
+  select distinct year as year
+  from gdp
+  where year > (select max(year) - 5 from gdp)
+  order by year asc
+),
+lines as (
+  select 'select country_id as id ' as part
+  union all
+  select ', SUM(CASE WHEN year = ' || year || ' THEN value  end) as  "' || year || '" '
+  from years
+  union all
+  select 'from base_gdp group by 1'
+)
+select *
+from lines;

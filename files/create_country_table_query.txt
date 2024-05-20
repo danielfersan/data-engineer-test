@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS country (
+    id TEXT NOT NULL,
+    name TEXT NOT NULL,
+    iso3_code TEXT NOT NULL,
+    create_date DATE NOT NULL
+)
