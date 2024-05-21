@@ -3,6 +3,12 @@
 ## Introduction
 This test is make from Daniel Fernandes
 
+To run the project execute the command
+
+```
+docker compose up --build
+ ```
+
 ### Database Choise
 I chose to use SQLite as a SQL Database, as it is simpler to create and perform queries. 
 

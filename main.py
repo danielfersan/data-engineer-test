@@ -25,10 +25,8 @@ def create_db():
     """""function that call the create tables in SQLite"""""
     country_query = open_query_file('files/create_country_table_query.txt')
     gdp_query = open_query_file('files/create_gdp_table_query.txt')
-    # result = open_query_file('files/create_result_table_query.txt')
     db.create_table(country_query)
     db.create_table(gdp_query)
-    # db.create_table(result)
 
 
 def create_tables(content, country_table, gdp_table):
